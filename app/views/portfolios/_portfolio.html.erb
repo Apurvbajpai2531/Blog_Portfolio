@@ -1,0 +1,21 @@
+<div class="col-md-4 mb-3 portfolio-item" data-id="<%= portfolio.id %>">
+  <div class="card mb-4 shadow-sm">
+    <%= image_tag portfolio_img(portfolio.thumb_image, 'thumb'), alt: portfolio.title, class: "bd-placeholder-img card-img-top" %>
+
+    <div class="card-body">
+      <h5><%= link_to portfolio.title, portfolio_show_path(portfolio), class: "text-dark" %></h5>
+      <p class="card-text"><%= truncate(portfolio.subtitle, length: 100) %></p>
+      <p class="card-text"><%= truncate(portfolio.body, length: 150) %></p>
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="btn-group">
+          <%= link_to 'View', portfolio_show_path(portfolio), class: "btn btn-sm btn-outline-secondary" %>
+          <% if logged_in?(:site_admin) %>
+            <%= link_to 'Edit', edit_portfolio_path(portfolio), class: "btn btn-sm btn-outline-secondary" %>
+            <%= button_to 'Delete', portfolio_path(portfolio), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger ml-2' %>
+          <% end %>
+        </div>
+        <small class="text-muted"><%= portfolio.created_at.strftime("%b %d, %Y") %></small>
+      </div>
+    </div>
+  </div>
+</div>

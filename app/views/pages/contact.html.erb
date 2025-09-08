@@ -1,0 +1,62 @@
+<h1 class='text-white' 
+    style="font-family: 'Poppins', sans-serif; font-size: 40px; font-weight: 700; margin-bottom: 20px;">
+  📞 Contact
+</h1>
+
+<hr style="border: 1px solid white; width: 80%; margin-bottom: 30px;">
+
+<div class="row" style="color: white; font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.8;">
+
+  <!-- Contact Details -->
+  <div class="col-md-6">
+    <h3 style="font-size: 22px; font-weight: 600;">📍 Address</h3>
+    <p>Prayagraj, India</p>
+
+    <h3 style="font-size: 22px; font-weight: 600;">📞 Phone</h3>
+    <p><%= number_to_phone "93058*****" %></p>
+
+    <h3 style="font-size: 22px; font-weight: 600;">📧 Email</h3>
+    <p><a href="mailto:apurvbjp@gmail.com" style="color: #00d4ff; text-decoration: none;">apurvbjp@gmail.com</a></p>
+
+    <h3 style="font-size: 22px; font-weight: 600;">💼 LinkedIn</h3>
+    <p>
+      <a href="https://www.linkedin.com/in/apurv-bajpai-99382324a" target="_blank" 
+         style="color: #ffcc00; font-weight: bold; text-decoration: none;">
+         🔗 Connect on LinkedIn
+      </a>
+    </p>
+
+    <p style="margin-top: 20px; font-size: 18px; font-weight: bold; color: #00ff99;">
+      ✅ Open to Work
+    </p>
+  </div>
+
+  <!-- Contact Form -->
+  <div class="col-md-6">
+    <h3 style="font-size: 22px; font-weight: 600;">✉️ Get in Touch</h3>
+
+    <form style="margin-top: 15px;">
+      <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Your Name" required 
+               style="border-radius: 10px; padding: 10px;">
+      </div>
+      <div class="mb-3">
+        <input type="email" class="form-control" placeholder="Your Email" required 
+               style="border-radius: 10px; padding: 10px;">
+      </div>
+      <div class="mb-3">
+        <textarea class="form-control" rows="4" placeholder="Your Message" required 
+                  style="border-radius: 10px; padding: 10px;"></textarea>
+      </div>
+      <button type="submit" class="btn btn-lg fw-bold" 
+              style="background: linear-gradient(135deg, #6a11cb, #2575fc); 
+                     color: white; 
+                     border-radius: 50px; 
+                     padding: 12px 28px; 
+                     border: none; 
+                     transition: 0.3s;">
+        🚀 Send Message
+      </button>
+    </form>
+  </div>
+</div>

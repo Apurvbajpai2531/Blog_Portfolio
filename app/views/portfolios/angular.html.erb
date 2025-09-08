@@ -1,0 +1,21 @@
+<h1>⚡ Angular Portfolio Items</h1>
+
+<%= link_to "➕ Create New Item", new_portfolio_path if logged_in?(:site_admin) %>
+
+<% @angular_portfolio_items.each do |portfolio_item| %>
+  <div style="margin-bottom: 30px; padding: 15px; border: 1px solid #ddd; border-radius: 10px; background: #f9f9f9;">
+    <h3><%= link_to portfolio_item.title, portfolio_path(portfolio_item), style: "text-decoration: none; color: #2a5298;" %></h3>
+    <p><strong>📌 <%= portfolio_item.subtitle %></strong></p>
+    <p><%= portfolio_item.body %></p>
+
+    <!-- Always show a default image instead of item-specific -->
+    <p>
+      <%= image_tag("default-angular.png", width: 200, alt: "Angular Project", style: "border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);") %>
+    </p>
+
+    <% if logged_in?(:site_admin) %>
+      <p><%= link_to "✏️ Edit", edit_portfolio_path(portfolio_item), style: "margin-right: 10px;" %></p>
+      <p><%= link_to "🗑 Delete Portfolio Item", portfolio_path(portfolio_item), method: :delete, data: { confirm: "Are you sure?" } %></p>
+    <% end %>
+  </div>
+<% end %>

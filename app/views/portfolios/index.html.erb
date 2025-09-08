@@ -1,0 +1,12 @@
+<h1 class="mb-4">Portfolio Items</h1>
+
+<%= link_to "Create new portfolio", new_portfolio_path if logged_in?(:site_admin) %>
+
+<div class="album py-5 bg-light">
+  <div class="container">
+    <!-- Sortable container -->
+    <div class="row <%="sortable" if logged_in?(:site_admin)%>">
+      <%= render @portfolios %>
+    </div>
+  </div>
+</div>

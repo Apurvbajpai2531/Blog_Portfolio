@@ -1,0 +1,12 @@
+<div class="col-sm-8 blog-main">
+          <%= paginate @blogs %>
+            <% @blogs.each do |blog| %>
+                <%= render "blog", blog: blog %>
+            <% end %>
+
+
+          
+          <%= paginate @blogs %>
+        </div><!-- /.blog-main -->
+
+
